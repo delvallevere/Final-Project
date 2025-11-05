@@ -1,0 +1,150 @@
+/* 
+====================================================
+Team Members: 
+1. Travon Clark 
+2. Verenice Del Valle-Prudente 
+3. Ruth Opoku 
+4. Iasia Williams 
+Date: 11/04/2025
+File Name: style.css
+====================================================
+*/
+
+/* ====================================================
+   CSS RESET
+   Purpose: Remove default browser styles for consistency
+   ==================================================== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Ensure HTML5 elements display correctly in older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background-color: #f8f9fa;
+    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ol, ul {
+    list-style: none; /* Removes bullet markers */
+}
+
+a {
+    text-decoration: none; /* Removes underlines */
+    color: #0056b3;
+}
+
+/* ====================================================
+   HEADER STYLES
+   ==================================================== */
+header {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+/* ====================================================
+   NAVIGATION STYLES
+   ==================================================== */
+nav {
+    background-color: #0056b3;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+/* ====================================================
+   MAIN CONTENT STYLES
+   ==================================================== */
+main {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+h2 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+/* Example of a class selector */
+.highlight {
+    background-color: #ffeb3b;
+    font-weight: bold;
+    padding: 5px;
+}
+
+/* Example of an ID selector */
+#featured {
+    border: 2px solid #003366;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ====================================================
+   FOOTER STYLES
+   ==================================================== */
+footer {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ====================================================
+   ADDITIONAL STYLES
+   ==================================================== */
+button {
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003366;
+}

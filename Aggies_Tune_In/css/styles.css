@@ -12,10 +12,6 @@
    CSS RESET
    Purpose: Remove default browser styles for consistency
    ==================================================== */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -37,7 +33,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
+/* Ensure HTML5 elements display correctly in older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
     display: block;
@@ -51,46 +47,12 @@ body {
 }
 
 ol, ul {
-    list-style: none;
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* ====================================================
-   BASE STYLES
-   ==================================================== */
-body {
-    line-height: 1.6;
-    font-size: 16px;
-    background-color: #f8f9fa;
-    color: #222;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    list-style: none; /* Removes bullet markers */
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; /* Removes underlines */
     color: #0056b3;
-    transition: all 0.3s ease;
-}
-
-a:hover {
-    color: #003366;
 }
 
 /* ====================================================
@@ -101,13 +63,10 @@ header {
     color: #ffffff;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
 }
 
 /* ====================================================
@@ -117,30 +76,22 @@ nav {
     background-color: #0056b3;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
 }
 
 nav ul {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 nav a {
     color: #ffffff;
     font-weight: bold;
     padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
 }
 
-nav a:hover,
-nav a:focus {
+nav a:hover {
     background-color: #003366;
     border-radius: 5px;
-    outline: 2px solid #ffeb3b;
-    outline-offset: 2px;
 }
 
 /* ====================================================
@@ -149,70 +100,25 @@ nav a:focus {
 main {
     padding: 20px;
     background-color: #ffffff;
-    flex: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     color: #003366;
-    margin-bottom: 15px;
-    font-size: 1.8em;
-    font-weight: bold;
-}
-
-p {
-    margin-bottom: 15px;
-    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 /* Example of a class selector */
 .highlight {
     background-color: #ffeb3b;
     font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 3px;
-    display: inline-block;
+    padding: 5px;
 }
 
 /* Example of an ID selector */
 #featured {
     border: 2px solid #003366;
-    padding: 20px;
+    padding: 15px;
     margin-top: 20px;
-    border-radius: 8px;
-    background-color: #f8f9fa;
-}
-
-#featured h3 {
-    color: #0056b3;
-    font-size: 1.4em;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-/* ====================================================
-   BUTTON STYLES
-   ==================================================== */
-button {
-    background-color: #0056b3;
-    color: #ffffff;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    font-size: 1em;
-}
-
-button:hover,
-button:focus {
-    background-color: #003366;
-    outline: 2px solid #ffeb3b;
-    outline-offset: 2px;
 }
 
 /* ====================================================
@@ -222,121 +128,22 @@ footer {
     background-color: #003366;
     color: #ffffff;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     margin-top: 20px;
 }
 
-footer p {
-    margin-bottom: 0;
-}
-
 /* ====================================================
-   RESPONSIVE DESIGN
+   ADDITIONAL STYLES
    ==================================================== */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-    
-    nav a {
-        display: block;
-        width: 200px;
-        text-align: center;
-    }
-    
-    main {
-        padding: 15px;
-        margin: 10px;
-    }
-    
-    #featured {
-        padding: 15px;
-    }
+button {
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
 }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-    
-    header {
-        padding: 15px;
-    }
-    
-    main {
-        padding: 10px;
-        margin: 5px;
-    }
-    
-    h2 {
-        font-size: 1.5em;
-    }
+button:hover {
+    background-color: #003366;
 }
 
-/* ====================================================
-   ACCESSIBILITY IMPROVEMENTS
-   ==================================================== */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-/* Focus styles for keyboard navigation */
-a:focus-visible,
-button:focus-visible {
-    outline: 3px solid #ffeb3b;
-    outline-offset: 2px;
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    .highlight {
-        background-color: yellow;
-        color: black;
-        border: 2px solid black;
-    }
-    
-    nav a:hover,
-    nav a:focus {
-        background-color: #001a33;
-        outline-color: white;
-    }
-}
-
-/* ====================================================
-   UTILITY CLASSES
-   ==================================================== */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.mt-20 {
-    margin-top: 20px;
-}
-
-.mb-20 {
-    margin-bottom: 20px;
-}

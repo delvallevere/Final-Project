@@ -122,6 +122,17 @@ h2 {
     background: #eef4fa;
 }
 
+.grid-layout {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    border: 1px solid black;
+  	padding: 10px;
+    
+.grid-layout .full-width {
+    grid-column: 1 / span 2;
+}
+
 /* ====================================================
    BUTTON STYLES
    ==================================================== */
@@ -137,6 +148,7 @@ button {
 
 button:hover {
     background-color: #003366;
+        opacity: 0.65;
 }
 
 /* ====================================================
@@ -150,7 +162,97 @@ footer {
     margin-top: 30px;
     font-size: 0.9em;
 }
-    background-color: #003366;
+
+/* ============================
+   TABLET VIEWPORT (min 768px)
+   ============================ */
+@media screen and (min-width: 768px) {
+
+    /* Show tablet/desktop elements */
+    .tablet-desktop-only {
+        display: block;
+    }
+
+    /* Hide mobile content */
+    .mobile-only {
+        display: none;
+    }
+
+    /* Two-column layout example */
+    .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Slight spacing adjustments for wider screens */
+    main {
+        padding: 2rem;
+    }
 }
 
+/* ============================
+   DESKTOP VIEWPORT (min 1024px)
+   ============================ */
+@media screen and (min-width: 1024px) {
 
+    /* Apply a gradient background */
+    body {
+        background: linear-gradient(to bottom right, #ffffff, #ffeb3b);
+    }
+
+    /* Hover pseudo-class (dynamic pseudo-class requirement) */
+    nav a:hover {
+        color: #5533cc;
+        text-decoration: underline;
+    }
+
+    /* More refined two-column layout */
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+}
+
+/* ============================
+   LARGE DESKTOP (min 1440px)
+   ============================ */
+@media screen and (min-width: 1440px) {
+
+    /* Keep content from appearing too stretched */
+    .site-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    /* Increase font sizes for readability */
+    body {
+        font-size: 1.1rem;
+    }
+}
+
+/* ============================
+   PRINT STYLES
+   ============================ */
+@media print {
+
+    /* Remove backgrounds for printer-friendly layout */
+    body {
+        background: white !important;
+    }
+
+    /* Hide anything unnecessary for printing */
+    nav, footer, .mobile-only {
+        display: none;
+    }
+
+    /* Ensure text prints clearly */
+    main {
+        padding: 0;
+        color: black;
+    }
+}
+
+}
